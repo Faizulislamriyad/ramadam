@@ -389,3 +389,8 @@ body {
         font-size: 0.8rem;
     }
 }
+@media (min-width: 769px) {
+  .install-btn {
+    display: none !important;
+  }
+}
