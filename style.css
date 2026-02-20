@@ -63,12 +63,12 @@ body {
 
 .today-card h1 {
     color: #1a3b2e;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     margin-bottom: 1rem;
 }
 
 .ramadan-day {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #c9a227;
     font-weight: bold;
     margin-bottom: 1rem;
@@ -97,8 +97,8 @@ body {
 }
 
 .time-item .value {
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-size: 2.0rem;
+    font-weight: 600;
     color: #1a3b2e;
 }
 
@@ -109,11 +109,11 @@ body {
 }
 
 .countdown {
-    background: #1a3b2e;
-    color: white;
+    background: rgb(255, 236, 202);
+    color: rgb(0, 0, 0);
     padding: 1rem;
     border-radius: 50px;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     margin-top: 1rem;
 }
 
@@ -208,7 +208,7 @@ body {
     border: none;
     padding: 0.8rem 2rem;
     border-radius: 30px;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     font-weight: bold;
     cursor: pointer;
     margin-top: 1.5rem;
@@ -231,7 +231,129 @@ body {
     border-radius: 10px;
     margin-top: 2rem;
 }
+.install-btn {
+  display: none; 
+  margin: 20px auto;
+  background: #c9a227;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  cursor: pointer;
+  white-space: nowrap;
+  width: fit-content; 
+  text-align: center;
+  transition: background 0.2s;
+}
+.install-btn:hover {
+    background-color: #1a3b2e;
+}
+.slide-nav {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  pointer-events: none; /* allow clicks to pass through container */
+  z-index: 150;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
 
+.slide-nav a {
+  pointer-events: auto; /* make arrows clickable */
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem; /* slightly larger for better tap */
+  background: rgba(201, 162, 39, 0.9); /* semi-transparent gold */
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: background 0.2s;
+  opacity: 0.5;
+}
+
+.slide-nav a:hover {
+  background: #c9a227;
+}
+
+/* On desktop, still show but maybe smaller? We'll keep them visible but can adjust */
+@media (min-width: 769px) {
+  .slide-nav a {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+}
+
+/* ===== Make "Today's Schedule" card more compact on mobile ===== */
+@media (max-width: 480px) {
+  .today-card {
+    padding: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .today-card h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .ramadan-day {
+    font-size: 1.3rem;
+  }
+
+  .time-item {
+    padding: 1rem;
+  }
+
+  .time-item .value {
+    font-size: 1.8rem;
+  }
+
+  .time-item .label {
+    font-size: 1rem;
+  }
+
+  .countdown {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+
+  .location-info {
+    font-size: 1rem;
+  }
+
+  .change-location-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Ensure main content doesn't get hidden behind fixed elements */
+.container {
+  padding-bottom: 20px; /* small space at bottom */
+}
+/* Hide slide nav on desktop */
+@media (min-width: 769px) {
+  .slide-nav {
+    display: none;
+  }
+}
+
+/* Adjust container margin on mobile to accommodate bottom nav */
+@media (max-width: 768px) {
+  .container {
+    margin-bottom: 70px;
+  }
+}
 /* Responsive */
 @media (max-width: 480px) {
     .navbar a {
@@ -240,11 +362,11 @@ body {
     }
     
     .time-item .value {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     .today-card h1 {
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
     
     .ramadan-day {
@@ -259,5 +381,11 @@ body {
     .month-table td {
         font-size: 0.9rem;
         padding: 0.6rem;
+    }
+    .countdown {
+        font-size: 0.9rem;
+    }
+    .change-location-btn {
+        font-size: 0.8rem;
     }
 }

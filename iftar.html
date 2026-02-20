@@ -1,24 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="bn">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>রমজান টাইমস - ইফতার</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json">
+  </head>
+  <body>
     <nav class="navbar">
-        <a href="index.html">আজ</a>
-        <a href="sehri.html">সেহরি</a>
-        <a href="iftar.html" class="active">ইফতার</a>
+      <a href="index.html">আজ</a>
+      <a href="sehri.html">সেহরি</a>
+      <a href="iftar.html" class="active">ইফতার</a>
     </nav>
+    <!-- Add to Home Screen button -->
+    <button id="installBtn" class="install-btn" onclick="installPWA()">
+      হোম স্ক্রিনে যোগ করুন
+    </button>
+
+    <!-- Slide navigation (only on phones) -->
+    <div class="slide-nav">
+      <a href="sehri.html" id="prevPage" aria-label="পূর্ববর্তী পৃষ্ঠা">◀</a>
+      <a href="index.html" id="nextPage" aria-label="পরবর্তী পৃষ্ঠা">▶</a>
+    </div>
     <main class="container" id="main-content">
-        <div class="loading">লোকেশন শনাক্ত করা হচ্ছে...</div>
+      <div class="loading">লোকেশন শনাক্ত করা হচ্ছে...</div>
     </main>
     <script src="config.js"></script>
     <script src="location.js"></script>
     <script src="api.js"></script>
     <script src="shared-utils.js"></script>
     <script src="iftar.js"></script>
-</body>
+    <script src="pwa.js"></script>
+  </body>
 </html>
