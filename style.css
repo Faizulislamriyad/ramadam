@@ -268,11 +268,11 @@ body {
   pointer-events: auto; /* make arrows clickable */
   color: white;
   text-decoration: none;
-  font-size: 1.8rem; /* slightly larger for better tap */
+  font-size: 1.3rem; /* slightly larger for better tap */
   background: rgba(201, 162, 39, 0.9); /* semi-transparent gold */
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
